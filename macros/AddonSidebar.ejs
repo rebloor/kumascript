@@ -171,5 +171,51 @@ function currentPageIsUnder(root) {
         <li><a href="irc://irc.mozilla.org/extdev">IRC Channel</a></li>
       </ol>
     </li>
+    
+        <li><a href="<%=baseURL%>Legacy_add_ons"><strong>Legacy Add-ons</strong></a></li>
+
+    <li><a href="<%=baseURL%>SDK">Add-on SDK</a>
+      <ol>
+        <li><a href="<%=baseURL%>SDK">Introduction</a></li>
+        <li><a href="<%=baseURL%>SDK/Tutorials/Installation">Installation</a></li>
+        <li><a href="<%=baseURL%>SDK/Tutorials/Getting_started">Getting started</a></li>
+        <li><a href="<%=baseURL%>SDK/Tutorials/Troubleshooting">Troubleshooting</a></li>
+      </ol>
+    </li>
+    
+    <li data-default-state="<%=currentPageIsUnder('SDK/High-Level_APIs')%>"><a href="<%=baseURL%>SDK/High-Level_APIs">High-Level APIs</a>
+      <%-
+        wiki.tree(baseURL + "SDK/High-Level_APIs", 1, 0, 0, 1)
+      %>
+    </li>
+    <li data-default-state="<%=currentPageIsUnder('SDK/Low-Level_APIs')%>"><a href="<%=baseURL%>SDK/Low-Level_APIs">Low-Level APIs</a>
+      <%-
+        wiki.tree(baseURL + "SDK/Low-Level_APIs", 1, 0, 0, 1)
+      %>
+    </li> 
+
+    <li><a href="<%=baseURL%>Legacy_Firefox_for_Android">Firefox for Android</a>
+      <ol>
+        <li><a href="<%=baseURL%>Legacy_Firefox_for_Android">Introduction</a></li>
+        <li><a href="<%=baseURL%>Legacy_Firefox_for_Android/Walkthrough">Walkthrough</a></li>
+        <li><a href="<%=locale%>/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE">Debugging</a></li>
+        <li><a href="<%=baseURL%>Legacy_Firefox_for_Android/Code_snippets">Code snippets</a></li>
+      </ol>
+    </li>
+
+    <li><a href="<%=baseURL%>Legacy_Firefox_for_Android/API">APIs</a>
+      <%-
+        wiki.tree(baseURL + "Legacy_Firefox_for_Android/API", 1, 0, 0, 1)
+      %>
+    </li> 
+
+    
+    <li><a href="<%=baseURL%>Bootstrapped_Extensions">Earlier technology</a>
+      <ol>
+        <li><a href="<%=baseURL%>Bootstrapped_extensions">Bootstrapped extensions</a></li>
+        <li><a href="<%=baseURL%>Overlay_Extensions">Overlay extensions</a></li>
+      </ol>
+    </li>
+
   </ol>
 </section>
